@@ -18,3 +18,7 @@ dependencies {
     // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
     testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
 }
+
+test{
+    useTestNG()
+}

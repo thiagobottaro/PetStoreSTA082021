@@ -15,6 +15,7 @@ import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.contains;
 
  // 3 - Classe
 public class Pet {
@@ -45,10 +46,13 @@ public class Pet {
         .then() // Entao
                 .log().all()
                 .statusCode(200) // status code da conexao com o servidor
-                .body("name", is("Kiara2"))
+                .body("name", is("Kiara"))
                 .body("status", is("available"))
+                .body("category.name", is("dog"))
+                .body("tags.name", contains("sta")) // contains utilizar para verificar conteudo de array
+        ;
+
         //id: 5864798277
         //id: 9223372036854775807
-        ;
     }
 }

@@ -1,3 +1,7 @@
+ //diff online
+ // diffnow.com
+ // https://mvnrepository.com/artifact/org.testng/testng/7.1.0
+
 // 1 - Pacote
 package petstore;
 
